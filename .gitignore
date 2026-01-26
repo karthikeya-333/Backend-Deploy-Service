@@ -12,10 +12,7 @@ target/
 */.idea/
 *.iml
 
-# ===== Build folders =====
-build/
-build-server-node/
-build-server-springboot/
+
 
 # ===== Logs =====
 *.log
