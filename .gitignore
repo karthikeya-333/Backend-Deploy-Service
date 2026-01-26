@@ -1,0 +1,25 @@
+# ===== Secrets =====
+.env
+.env.*
+*/.env
+
+# ===== Maven =====
+target/
+*/target/
+
+# ===== IntelliJ =====
+.idea/
+*/.idea/
+*.iml
+
+# ===== Build folders =====
+build/
+build-server-node/
+build-server-springboot/
+
+# ===== Logs =====
+*.log
+
+# ===== OS =====
+.DS_Store
+Thumbs.db

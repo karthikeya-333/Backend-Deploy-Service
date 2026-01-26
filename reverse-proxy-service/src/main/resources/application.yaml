@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: reverse-proxy-service
+
+  r2dbc:
+    url: ${R2DBC_DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    pool:
+      enabled: true
+      initial-size: ${R2DBC_POOL_INITIAL_SIZE:5}
+      max-size: ${R2DBC_POOL_MAX_SIZE:20}
+
+  logging:
+    level:
+      org.springframework.data.r2dbc: DEBUG
+
+app:
+  domain:
+    base: ${BASE_DOMAIN}
+  proxy:
+    target-port-node: ${PROXY_TARGET_PORT_NODE:3000}
+    target-port-springboot: ${PROXY_TARGET_PORT_SPRINGBOOT:8080}
+
+
