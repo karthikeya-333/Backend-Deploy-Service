@@ -14,5 +14,7 @@ public interface DeploymentRepository extends JpaRepository<Deployment, Long> {
 
     Optional<Deployment> findByDeploymentId(String deploymentId);
 
+    Optional<Deployment> findByAccessUrl(String accessUrl);
+
     boolean existsByAccessUrl(String url);
 }
