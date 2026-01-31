@@ -7,7 +7,9 @@ BDS is a deployment orchestrator. It exposes an API that takes a **Git URL**, bu
 
 ### Architecture
 
-<img width="614" height="290" alt="image" src="https://github.com/user-attachments/assets/0e6a126b-0f01-417b-9192-449c5f213237" />
+  <img width="614" height="290" alt="image" src="https://github.com/user-attachments/assets/0e6a126b-0f01-417b-9192-449c5f213237" />  
+  <br/>
+  <br/>
 
 
 * **Deploy Service:** The core API. It receives the Git URL, triggers ECS tasks, saves deployment data to Supabase, gives access url, and streams logs via WebSockets.
@@ -42,7 +44,7 @@ In the AWS Console, create **Fargate** Task Definitions for both runners:
 *Enable CloudWatch logging so the Deploy Service can tail the logs.*
 
 #### 3. Run the Backend Service
-1. Update `application.yml` files in `deploy-servvice` and `reverse-proxy-service` with your AWS credentials, Supabase URL, and ECS Cluster name.
+1. Update `application.yml` files in `deploy-service` and `reverse-proxy-service` with your AWS credentials, Supabase URL, and ECS Cluster name.
 2. Run the applications
 
 ```bash
@@ -51,3 +53,10 @@ cd deploy-service
 
 cd reverse-proxy-service
 ./mvnw spring-boot:run
+```
+
+---
+
+
+### 👤 Author
+**Karthikeya Chanda**
